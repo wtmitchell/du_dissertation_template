@@ -81,9 +81,19 @@
   \end{titlepage}
 }
 
+% Create a copyright page
+\newcommand*{\createcopyrightpage}{
+  \begin{center}
+    \textcircled{c}~Copyright by \@author~\@graduationyear\\
+    All Rights Reserved
+  \end{center}
+  \clearpage
+}
+
 \newcommand*{\startofdocument}{
   \doublespacing
   \createtitlepage
+  \createcopyrightpage
 }
 
 \AtBeginDocument{\startofdocument}
