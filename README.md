@@ -1,4 +1,4 @@
-# du_dissertation_template
+# DU Dissertation Template
 A LaTeX template designed to meet the requirements of the University of Denver for a PhD Dissertation. It uses modern LaTeX with KOMA-Script's scrreprt as a basis.
 
 *Note*: This is an unofficial template and not supported by the university. It is up to you to ensure that your work meets the university guidelines.
