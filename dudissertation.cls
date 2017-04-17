@@ -29,6 +29,9 @@
 \newcommand*\graduationyear[1]{\renewcommand\@graduationyear{#1}}
 \newcommand*\@graduationyear{\@latex@error{No \noexpand\graduationyear given}\@ehc}
 
+\newcommand*\abstractfilename[1]{\renewcommand\@abstractfilename{#1}}
+\newcommand*\@abstractfilename{\@latex@error{No \noexpand\abstractfilename given}\@ehc}
+
 % Create a title page
 \newcommand*\createtitlepage{
   \begin{titlepage}
@@ -87,6 +90,25 @@
     \textcircled{c}~Copyright by \@author~\@graduationyear\\
     All Rights Reserved
   \end{center}
+  \clearpage
+}
+
+% Create an abstract page
+\newcommand*{\createabstractpage}{
+  \begin{abstract}
+    \begin{singlespace}
+      \noindent Author: \@author\\
+      Title: \@title\\
+      Advisor: \@advisor\\
+      Degree Date: \@graduationmonth~\@graduationyear\\
+    \end{singlespace}
+
+    \begin{center}
+      \bfseries{Abstract}
+    \end{center}
+
+    \input{\@abstractfilename}
+  \end{abstract}
   \clearpage
 }
 
