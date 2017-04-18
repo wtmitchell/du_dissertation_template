@@ -102,6 +102,7 @@
 
 % Create a copyright page
 \newcommand*{\createcopyrightpage}{
+  \thispagestyle{empty} % Removes page number at bottom of page
   \begin{center}
     \textcircled{c}~Copyright by \@author~\@graduationyear\\
     All Rights Reserved
@@ -112,7 +113,7 @@
 % Create an abstract page
 \newcommand*{\createabstractpage}{
   \begin{abstract}
-  \thispagestyle{plain}
+    \thispagestyle{plain} % Puts page number at bottom of page
     \begin{singlespace}
       \noindent Author: \@author\\
       Title: \@title\\
@@ -142,6 +143,7 @@
 \newcommand*{\startofdocument}{
   \doublespacing
   \createtitlepage
+  \pagenumbering{roman}
   \iftoggle{copyrightpage}{
     \createcopyrightpage
   }{}
@@ -149,6 +151,8 @@
   \iftoggle{acknowledgmentspage} {
     \createacknowledgmentspage
   }{}
+
+  \pagenumbering{arabic}
 }
 
 \AtBeginDocument{\startofdocument}
