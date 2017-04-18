@@ -32,6 +32,10 @@
 \newcommand*\abstractfilename[1]{\renewcommand\@abstractfilename{#1}}
 \newcommand*\@abstractfilename{\@latex@error{No \noexpand\abstractfilename given}\@ehc}
 
+% Set up toggles for the optional pages
+\usepackage{etoolbox}
+\newtoggle{copyrightpage}
+
 % Create a title page
 \newcommand*\createtitlepage{
   \begin{titlepage}
@@ -115,7 +119,9 @@
 \newcommand*{\startofdocument}{
   \doublespacing
   \createtitlepage
-  \createcopyrightpage
+  \iftoggle{copyrightpage}{
+    \createcopyrightpage
+  }{}
 }
 
 \AtBeginDocument{\startofdocument}
