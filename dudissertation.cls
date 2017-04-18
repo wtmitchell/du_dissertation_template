@@ -167,7 +167,9 @@
 tmargin=1in,
 bmargin=1in,
 lmargin=1.5in,
-rmargin=1in
+rmargin=1in,
+includehead=true,
+includefoot=true
 ]{geometry}
 \usepackage{ifpdf}
 \ifpdf
