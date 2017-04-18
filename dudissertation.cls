@@ -112,6 +112,7 @@
 % Create an abstract page
 \newcommand*{\createabstractpage}{
   \begin{abstract}
+  \thispagestyle{plain}
     \begin{singlespace}
       \noindent Author: \@author\\
       Title: \@title\\
