@@ -175,11 +175,5 @@ rmargin=1in,
 includehead=true,
 includefoot=true
 ]{geometry}
-\usepackage{ifpdf}
-\ifpdf
-\geometry{driver=pdftex}
-\else
-\geometry{driver=dvips}
-\fi
 
 \usepackage{setspace}
