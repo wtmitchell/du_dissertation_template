@@ -32,9 +32,21 @@
 \newcommand*\abstractfilename[1]{\renewcommand\@abstractfilename{#1}}
 \newcommand*\@abstractfilename{\@latex@error{No \noexpand\abstractfilename given}\@ehc}
 
+
 % Set up toggles for the optional pages
 \usepackage{etoolbox}
 \newtoggle{copyrightpage}
+\newtoggle{acknowledgmentspage}
+
+\newcommand*\acknowledgmentsfilename[1]{\renewcommand\@acknowledgmentsfilename{#1}}
+
+\iftoggle{acknowledgmentspage}{
+  \newcommand*\@acknowledgmentsfilename{\@latex@error{No \noexpand\acknowledgmentsfilename given}\@ehc}
+}{
+  \newcommand*\@acknowledgmentsfilename{}
+
+}
+
 
 % Create a title page
 \newcommand*\createtitlepage{
@@ -116,11 +128,25 @@
   \clearpage
 }
 
+% Create an acknowledgments page
+\newcommand*{\createacknowledgmentspage}{
+  \begin{center}
+    \bfseries{Acknowledgments}
+  \end{center}
+
+  \input{\@acknowledgmentsfilename}
+  \clearpage
+}
+
 \newcommand*{\startofdocument}{
   \doublespacing
   \createtitlepage
   \iftoggle{copyrightpage}{
     \createcopyrightpage
+  }{}
+  \createabstractpage
+  \iftoggle{acknowledgmentspage} {
+    \createacknowledgmentspage
   }{}
 }
 
