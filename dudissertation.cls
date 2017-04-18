@@ -156,6 +156,9 @@
 
 \KOMAoption{fontsize}{11pt}
 
+% Set the paragraph indent to 0.5in to match the Word templates
+\setparsizes{0.5in}{0pt}{0pt plus 1fil}
+
 \usepackage{hyperref}
 % Page layout
 % If using hyperef, load it before this block
