@@ -152,6 +152,8 @@
     \createacknowledgmentspage
   }{}
 
+  \tableofcontents
+  \clearpage
   \pagenumbering{arabic}
 }
 
