@@ -155,8 +155,6 @@
   \pagenumbering{arabic}
 }
 
-\AtBeginDocument{\startofdocument}
-
 \LoadClass{scrreprt}
 
 \KOMAoption{fontsize}{11pt}
