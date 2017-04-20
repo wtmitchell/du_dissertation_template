@@ -171,7 +171,7 @@
 \setparsizes{0.5in}{0pt}{0pt plus 1fil}
 
 % This combination along with the geometry settings below always put a
-% 1in margin on the top and 1.5in top margin on new chapters
+% 1in margin on the top and 2in top margin on new chapters
 \renewcommand{\chapterheadstartvskip}{\vspace{0.75in}}
 \setlength{\headheight}{-0.25in}
 
@@ -182,14 +182,18 @@
 % Needed to double space body text
 \RequirePackage{setspace}
 
-\usepackage{hyperref}
+% Indent after section headings
+\RequirePackage{indentfirst}
+
+\RequirePackage{hyperref}
 % Page layout
-% If using hyperef, load it before this block
-\usepackage[paper=letterpaper,
-tmargin=1in,
-bmargin=1in,
-lmargin=1.5in,
-rmargin=1in,
+% Put an extra 0.125in of play on all dimensions to deal with margins
+% when printing
+\RequirePackage[paper=letterpaper,
+tmargin=1.125in,
+bmargin=1.125in,
+lmargin=1.625in,
+rmargin=1.125in,
 includehead=true,
 includefoot=true
 ]{geometry}
