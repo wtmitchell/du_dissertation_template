@@ -160,9 +160,15 @@
 \LoadClass{scrreprt}
 
 \KOMAoption{fontsize}{11pt}
+\KOMAoption{toc}{chapterentrywithdots}
 
 % Set the paragraph indent to 0.5in to match the Word templates
 \setparsizes{0.5in}{0pt}{0pt plus 1fil}
+
+\setcounter{tocdepth}{2}
+
+% Needed to double space body text
+\usepackage{setspace}
 
 \usepackage{hyperref}
 % Page layout
@@ -176,4 +182,3 @@ includehead=true,
 includefoot=true
 ]{geometry}
 
-\usepackage{setspace}
