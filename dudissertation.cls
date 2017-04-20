@@ -112,21 +112,18 @@
 
 % Create an abstract page
 \newcommand*{\createabstractpage}{
-  \begin{abstract}
-    \thispagestyle{plain} % Puts page number at bottom of page
-    \begin{singlespace}
-      \noindent Author: \@author\\
-      Title: \@title\\
-      Advisor: \@advisor\\
-      Degree Date: \@graduationmonth~\@graduationyear\\
-    \end{singlespace}
+  \begin{singlespace}
+    \noindent Author: \@author\\
+    Title: \@title\\
+    Advisor: \@advisor\\
+    Degree Date: \@graduationmonth~\@graduationyear\\
+  \end{singlespace}
 
-    \begin{center}
-      \bfseries{Abstract}
-    \end{center}
+  \begin{center}
+    \bfseries{Abstract}
+  \end{center}
 
-    \input{\@abstractfilename}
-  \end{abstract}
+  \input{\@abstractfilename}
   \clearpage
 }
 
@@ -164,6 +161,11 @@
 
 % Set the paragraph indent to 0.5in to match the Word templates
 \setparsizes{0.5in}{0pt}{0pt plus 1fil}
+
+% This combination along with the geometry settings below always put a
+% 1in margin on the top and 1.5in top margin on new chapters
+\renewcommand{\chapterheadstartvskip}{\vspace{0.75in}}
+\setlength{\headheight}{-0.25in}
 
 \setcounter{tocdepth}{2}
 
