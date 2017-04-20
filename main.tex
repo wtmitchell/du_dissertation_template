@@ -11,18 +11,17 @@
 \graduationyear{Year}
 \toggletrue{copyrightpage} % or \togglefalse{copyrightpage}
 
-
 \abstractfilename{abstract}
-
 \toggletrue{acknowledgmentspage} % or \togglefalse{acknowledgmentspage}
 \acknowledgmentsfilename{acknowledgments}
 
-% While writing, set to true to help identify lines that are too long
-\KOMAoption{draft}{true}
-%\KOMAoption{draft}{false}
+% While writing, it is recommended to enable this to highlight overfull boxes
+% and put line numbers in the margins. Comment out for final version
+\enabledraftmode
 
 \begin{document}
 % Create all the various required pages (title, copyright, abstract, etc)
+% This line is required
 \startofdocument
 
 %Include all your chapters

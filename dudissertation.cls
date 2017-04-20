@@ -137,6 +137,7 @@
   \clearpage
 }
 
+% Pages needed at start of document
 \newcommand*{\startofdocument}{
   \doublespacing
   \createtitlepage
@@ -159,6 +160,13 @@
 \KOMAoption{fontsize}{11pt}
 \KOMAoption{toc}{chapterentrywithdots}
 
+% Draft mode
+\newcommand*{\enabledraftmode}{
+  \KOMAoption{draft}{true}
+  \RequirePackage[left, pagewise]{lineno}
+  \linenumbers
+}
+
 % Set the paragraph indent to 0.5in to match the Word templates
 \setparsizes{0.5in}{0pt}{0pt plus 1fil}
 
@@ -167,10 +175,12 @@
 \renewcommand{\chapterheadstartvskip}{\vspace{0.75in}}
 \setlength{\headheight}{-0.25in}
 
+
+% Put chapter/section/subsection into the table of contents
 \setcounter{tocdepth}{2}
 
 % Needed to double space body text
-\usepackage{setspace}
+\RequirePackage{setspace}
 
 \usepackage{hyperref}
 % Page layout
