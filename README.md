@@ -17,7 +17,7 @@ Where applicable this template attempts to conform to (in order):
 Note that the library has an online license to the Chicago Manual of Style.
 
 Other resources:
-* [Mathematics into Type](ftp://ftp.ams.org/ams/author-info/documentation/howto/mit-2.pdf)  Detailed AMS guide to formatting mathematics including things like spacing between symbols
+* [Mathematics into Type](http://www.ams.org/publications/authors/authors) (free PDF linked from this page)  Detailed AMS guide to formatting mathematics including things like spacing between symbols
 
 LaTeX Package Dependencies:
 * KOMA-Script
