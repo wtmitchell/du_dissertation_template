@@ -139,19 +139,37 @@
 
 % Pages needed at start of document
 \newcommand*{\startofdocument}{
+  % Set PDF Metadata
+  \hypersetup{
+    pdfauthor={\@author},
+    pdftitle={\@title},
+    pdfprintscaling=None
+  }
+
+  % Everything is double space
   \doublespacing
+
+  % Title page
   \createtitlepage
+
+  % Copyright page
   \pagenumbering{roman}
   \iftoggle{copyrightpage}{
     \createcopyrightpage
   }{}
+
+  % Abstract page
   \createabstractpage
-  \iftoggle{acknowledgmentspage} {
+
+  % Acknowledgments page
+  \iftoggle{acknowledgmentspage}{
     \createacknowledgmentspage
   }{}
 
+  % Table of contents
   \tableofcontents
   \clearpage
+  % The remainder of the document uses arabic page numbers
   \pagenumbering{arabic}
 }
 
