@@ -23,14 +23,13 @@ LaTeX Package Dependencies:
 * KOMA-Script
 * etoolbox
 * lineno (used to put line numbers in the margin when in draft mode)
-* setspace
+* setspace - sets up double line spacing. Use the environment \begin{singlespace}...\end{singlespace} if single spacing is needed
 * indentfirst
 * hyperref
 * geometry
 
 Recommended LaTeX packages and tools:
 * [algorithmicx](https://www.ctan.org/pkg/algorithmicx) - Provides a nice environment to typeset algorithms. Use the algpseudocode layout (with just \usepackage{algopseudocode}, no need for \usepackage{algorithmicx}). This should be your choice for pseudocode.
-* [algorithms](https://www.ctan.org/pkg/algorithms) - Provides the algorithm environment which wraps an algorithm in a float, and it provides a \listofalgorithms function. Use this in combination with algpseudocode.
 * [cleveref](https://www.ctan.org/pkg/cleveref) - Simple, nice, inter-document cross references
 * [latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) - A Perl script which manages building the document. It will automatically call LaTeX the correct number of times as well as associated tools such as biber and xindy.
 * [listings](https://www.ctan.org/pkg/listings) - Typesets source code well. Best for actual source code, otherwise use algpseudocode.

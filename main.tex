@@ -24,6 +24,17 @@
 % If you wish to see lines at the exact margins, uncomment the line below
 \geometry{showframe}
 
+% Put additional package declarations here
+
+% Algorithms. The package algorithm is declared in the cls
+\toggletrue{listofalgorithms}
+\usepackage[noend]{algpseudocode}
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+%\algrenewcommand\alglinenumber[1]{{\sf\footnotesize\addfontfeatures{Colour=888888,Numbers=Monospaced}#1}}
+\algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
+\algrenewcommand\algorithmicensure{\textbf{Postcondition:}}
+
+
 \begin{document}
 % Create all the various required pages (title, copyright, abstract, etc)
 % This line is required

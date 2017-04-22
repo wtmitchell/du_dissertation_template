@@ -37,6 +37,7 @@
 \usepackage{etoolbox}
 \newtoggle{copyrightpage}
 \newtoggle{acknowledgmentspage}
+\newtoggle{listofalgorithms}
 
 \newcommand*\acknowledgmentsfilename[1]{\renewcommand\@acknowledgmentsfilename{#1}}
 
@@ -169,6 +170,13 @@
   % Table of contents
   \tableofcontents
   \clearpage
+
+  % List of algorithms
+  \iftoggle{listofalgorithms}{
+    \listofalgorithms
+    \clearpage
+  }{}
+
   % The remainder of the document uses arabic page numbers
   \pagenumbering{arabic}
 }
@@ -203,7 +211,34 @@
 % Indent after section headings
 \RequirePackage{indentfirst}
 
+% Algorithm setup
+
+% This the formatting of the ruled style from figure.sty,
+% Would like to incorporate this into KOMA's \DeclareNewTOC,
+% but as of yet this isn't working
+% \newcommand\floatc@ruled[2]{{\@fs@cfont #1} #2\par}
+% \newcommand\fs@ruled{\def\@fs@cfont{\bfseries}\let\@fs@capt\floatc@ruled
+%   \def\@fs@pre{\hrule height.8pt depth0pt \kern2pt}%
+%   \def\@fs@post{\kern2pt\hrule\relax}%
+%   \def\@fs@mid{\kern2pt\hrule\kern2pt}%
+%   \let\@fs@iftopcapt\iftrue}
+%   \RequirePackage{algorithm}
+%\setkomafont{captionlabel}{\bfseries}
+\DeclareNewTOC[
+%atbegin={\kern2pt\hrule\kern2pt},
+%atend={\kern2pt\hrule\kern2pt},
+type=algorithm,
+types=algorithms,
+float,
+floatpos=htbp,
+floattype=4,
+name=Algorithm,
+listname={List of Algorithms},
+counterwithin=chapter
+]{listofalgorithms}
+
 \RequirePackage{hyperref}
+
 % Page layout
 % Put an extra 0.125in of play on all dimensions to deal with margins
 % when printing

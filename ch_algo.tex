@@ -1,0 +1,30 @@
+\chapter{Algorithm Example}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis ex ut lacus ultrices, nec varius dolor varius. Phasellus a sagittis felis. Nam nisl justo, imperdiet tristique sodales nec, gravida nec purus. Vestibulum accumsan diam felis, id aliquet libero sollicitudin a. Duis feugiat ultrices nisl, quis ultrices diam imperdiet sit amet. Curabitur maximus nibh lorem, ac sollicitudin lectus ornare quis. Fusce rhoncus turpis quam, et molestie justo cursus non. Etiam lacinia accumsan tristique. Nam id leo sed ante efficitur fringilla. Pellentesque dapibus congue ullamcorper. Sed consequat tempor elit, a finibus lectus vulputate eu. Donec non tincidunt sem. Vivamus vehicula erat justo, non lacinia nisl bibendum vel.
+
+
+% Example ripped from https://tex.stackexchange.com/questions/1375/what-is-a-good-package-for-displaying-algorithms
+\begin{algorithm}
+  \caption{Counting mismatches between two packed DNA strings
+    \label{alg:packed-dna-hamming}}
+  \begin{algorithmic}[1]
+    \Require{$x$ and $y$ are packed DNA strings of equal length $n$}
+    \Ensure{$\delta$ is the distance}
+    \Statex
+    \Function{Distance}{$x, y$}
+      \Let{$z$}{$x \oplus y$} \Comment{$\oplus$: bitwise exclusive-or}
+      \Let{$\delta$}{$0$}
+      \For{$i \gets 1 \textrm{ to } n$}
+        \If{$z_i \neq 0$}
+          \Let{$\delta$}{$\delta + 1$}
+        \EndIf
+      \EndFor
+      \State \Return{$\delta$}
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
