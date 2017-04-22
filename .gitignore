@@ -181,3 +181,6 @@ TSWLatexianTemp*
 
 # macOS Temp files
 .DS_Store
+
+# Custom TOC files
+*.listofalgorithms
