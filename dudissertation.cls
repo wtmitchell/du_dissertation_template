@@ -208,9 +208,6 @@
 % Needed to double space body text
 \RequirePackage{setspace}
 
-% Indent after section headings
-\RequirePackage{indentfirst}
-
 % Algorithm setup
 
 % This the formatting of the ruled style from figure.sty,
