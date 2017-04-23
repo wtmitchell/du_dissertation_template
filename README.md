@@ -14,17 +14,18 @@ Where applicable this template attempts to conform to (in order):
 3. SIAM
 4. Chicago Manual of Style
 
+Most questions of style are not questions that apply to this template, but of the document regarding precise punctuation usage, word choice, etc.
+
 Note that the library has an online license to the Chicago Manual of Style.
 
 Other resources:
 * [Mathematics into Type](http://www.ams.org/publications/authors/authors) (free PDF linked from this page)  Detailed AMS guide to formatting mathematics including things like spacing between symbols
 
-LaTeX Package Dependencies:
+LaTeX package dependencies of the template:
 * KOMA-Script
 * etoolbox
-* lineno (used to put line numbers in the margin when in draft mode)
+* lineno - used to put line numbers in the margin when in draft mode
 * setspace - sets up double line spacing. Use the environment \begin{singlespace}...\end{singlespace} if single spacing is needed
-* indentfirst
 * hyperref
 * geometry
 

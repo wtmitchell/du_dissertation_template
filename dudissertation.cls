@@ -234,6 +234,12 @@ listname={List of Algorithms},
 counterwithin=chapter
 ]{listofalgorithms}
 
+\RequirePackage[noend]{algpseudocode}
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+%\algrenewcommand\alglinenumber[1]{{\sf\footnotesize\addfontfeatures{Colour=888888,Numbers=Monospaced}#1}}
+\algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
+\algrenewcommand\algorithmicensure{\textbf{Postcondition:}}
+
 \RequirePackage{hyperref}
 
 % Page layout

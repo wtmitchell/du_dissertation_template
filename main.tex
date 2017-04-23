@@ -26,13 +26,8 @@
 
 % Put additional package declarations here
 
-% Algorithms. The package algorithm is declared in the cls
+% Algorithms.
 \toggletrue{listofalgorithms}
-\usepackage[noend]{algpseudocode}
-\newcommand*\Let[2]{\State #1 $\gets$ #2}
-%\algrenewcommand\alglinenumber[1]{{\sf\footnotesize\addfontfeatures{Colour=888888,Numbers=Monospaced}#1}}
-\algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
-\algrenewcommand\algorithmicensure{\textbf{Postcondition:}}
 
 
 \begin{document}
@@ -43,6 +38,7 @@
 %Include all your chapters
 \include{ch_foo}
 \include{ch_bar}
+\include{ch_algo}
 
 \end{document}
 %%% Local Variables:
