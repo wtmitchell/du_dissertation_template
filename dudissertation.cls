@@ -247,6 +247,11 @@ counterwithin=chapter
 
 \RequirePackage{hyperref}
 
+\RequirePackage[
+nameinlink,
+noabbrev
+]{cleveref}
+
 % Page layout
 % Put an extra 0.125in of play on all dimensions to deal with margins
 % when printing
