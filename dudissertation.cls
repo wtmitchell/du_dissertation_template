@@ -41,15 +41,12 @@
 \newtoggle{listoffigures}
 \newtoggle{listoftables}
 
-\newcommand*\acknowledgmentsfilename[1]{\renewcommand\@acknowledgmentsfilename{#1}}
-
-\iftoggle{acknowledgmentspage}{
-  \newcommand*\@acknowledgmentsfilename{\@latex@error{No \noexpand\acknowledgmentsfilename given}\@ehc}
-}{
-  \newcommand*\@acknowledgmentsfilename{}
-
+% Allow for an acknowledgments page
+\newcommand*\@acknowledgmentsfilename{}
+\newcommand*\acknowledgments[1]{
+  \toggletrue{acknowledgmentspage}
+  \renewcommand\@acknowledgmentsfilename{#1}
 }
-
 
 % Create a title page
 \newcommand*\createtitlepage{
