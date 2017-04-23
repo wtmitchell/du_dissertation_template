@@ -38,6 +38,8 @@
 \newtoggle{copyrightpage}
 \newtoggle{acknowledgmentspage}
 \newtoggle{listofalgorithms}
+\newtoggle{listoffigures}
+\newtoggle{listoftables}
 
 \newcommand*\acknowledgmentsfilename[1]{\renewcommand\@acknowledgmentsfilename{#1}}
 
@@ -174,6 +176,14 @@
   \iftoggle{listofalgorithms}{
     \clearpage
     \listofalgorithms
+  }{}
+
+  \iftoggle{listoffigures}{
+    \listoffigures
+  }{}
+
+  \iftoggle{listoftables}{
+    \listoftables
   }{}
 
   \iftoggle{printlistofsymbols}{
