@@ -182,5 +182,8 @@ TSWLatexianTemp*
 # macOS Temp files
 .DS_Store
 
-# Custom TOC files
+# Custom TOC/glossaries files
 *.listofalgorithms
+*.slg
+*.slo
+*.sls

@@ -169,15 +169,20 @@
 
   % Table of contents
   \tableofcontents
-  \clearpage
 
   % List of algorithms
   \iftoggle{listofalgorithms}{
-    \listofalgorithms
     \clearpage
+    \listofalgorithms
+  }{}
+
+  \iftoggle{printlistofsymbols}{
+    \glsaddall
+    \printglossary[title=List of Symbols,type=symbols]
   }{}
 
   % The remainder of the document uses arabic page numbers
+  \clearpage
   \pagenumbering{arabic}
 }
 
@@ -187,9 +192,9 @@
 \KOMAoption{toc}{chapterentrywithdots}
 
 % Draft mode
+\RequirePackage[left, pagewise]{lineno}
 \newcommand*{\enabledraftmode}{
   \KOMAoption{draft}{true}
-  \RequirePackage[left, pagewise]{lineno}
   \linenumbers
 }
 
@@ -264,3 +269,11 @@ includehead=true,
 includefoot=true
 ]{geometry}
 
+% Glossary Setup used for List of Symbols
+\RequirePackage[xindy,nonumberlist,nogroupskip]{glossaries}
+\newtoggle{printlistofsymbols}
+\newcommand*{\setuplistofsymbols}[1]{
+  \toggletrue{printlistofsymbols}
+  \loadglsentries{#1}
+  \makeglossaries
+}
