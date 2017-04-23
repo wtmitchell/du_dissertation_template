@@ -21,12 +21,9 @@ push @generated_exts, "synctex.gz";
 
 # Process xindy files
 add_cus_dep( 'glo', 'gls', 0, 'makeglossaries' );
+add_cus_dep( 'slo', 'sls', 0, 'makeglossaries' );
+
 sub makeglossaries {
  system( "makeglossaries \"$_[0]\"" );
 }
 
-# Process xindfy files for list of symbols
-add_cus_dep( 'slo', 'sls', 0, 'makeglossaries' );
-sub makeglossaries {
- system( "makeglossaries \"$_[0]\"" );
-}
