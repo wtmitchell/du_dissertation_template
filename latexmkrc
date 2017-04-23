@@ -18,6 +18,11 @@ push @generated_exts, "slg";
 push @generated_exts, "slo";
 push @generated_exts, "sls";
 push @generated_exts, "synctex.gz";
+push @generated_exts, "synctex.gz(busy)";
+push @generated_exts, "run.xml";
+
+# Run biber as needed to regenerate bbl files
+$bibtex_use = 2;
 
 # Process xindy files
 add_cus_dep( 'glo', 'gls', 0, 'makeglossaries' );
