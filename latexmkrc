@@ -17,7 +17,7 @@ push @generated_exts, "gls";
 push @generated_exts, "slg";
 push @generated_exts, "slo";
 push @generated_exts, "sls";
-push @generated_exts, "synctex.tgz";
+push @generated_exts, "synctex.gz";
 
 # Process xindy files
 add_cus_dep( 'glo', 'gls', 0, 'makeglossaries' );
