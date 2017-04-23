@@ -208,6 +208,11 @@
 % Needed to double space body text
 \RequirePackage{setspace}
 
+% AMS setup
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amssymb}
+
 % Algorithm setup
 
 % This the formatting of the ruled style from figure.sty,

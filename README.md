@@ -28,10 +28,13 @@ LaTeX package dependencies of the template:
 * setspace - sets up double line spacing. Use the environment \begin{singlespace}...\end{singlespace} if single spacing is needed
 * hyperref
 * geometry
+* [amsmath](http://www.ams.org/publications/authors/tex/amslatex) - Lots of helpful math stuff
+* [amsthm](https://www.ctan.org/pkg/amsthm)
+* [amssymb](https://www.ctan.org/pkg/amsfonts) - Part of amsfonts
+* [cleveref](https://www.ctan.org/pkg/cleveref) - Simple, nice, inter-document cross references
+* [algorithmicx](https://www.ctan.org/pkg/algorithmicx) - Provides a nice environment to typeset algorithms. Use the algpseudocode layout (with just \usepackage{algopseudocode}, no need for \usepackage{algorithmicx}). This should be your choice for pseudocode.
 
 Recommended LaTeX packages and tools:
-* [algorithmicx](https://www.ctan.org/pkg/algorithmicx) - Provides a nice environment to typeset algorithms. Use the algpseudocode layout (with just \usepackage{algopseudocode}, no need for \usepackage{algorithmicx}). This should be your choice for pseudocode.
-* [cleveref](https://www.ctan.org/pkg/cleveref) - Simple, nice, inter-document cross references
 * [latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) - A Perl script which manages building the document. It will automatically call LaTeX the correct number of times as well as associated tools such as biber and xindy.
 * [listings](https://www.ctan.org/pkg/listings) - Typesets source code well. Best for actual source code, otherwise use algpseudocode.
 * [PGF/TikZ](https://www.ctan.org/pkg/pgf) - Creates nice figures. See [TeXample.net](http://www.texample.net/tikz/) for example figures to use as a basis.
