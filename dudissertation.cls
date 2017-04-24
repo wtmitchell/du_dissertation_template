@@ -180,7 +180,7 @@
 
   \iftoggle{printlistofsymbols}{
     \glsaddall
-    \addcontentsline{toc}{chapter}{List of Symbols}
+    \glstoctrue
     \printglossary[title=List of Symbols,type=symbols]
   }{}
 
