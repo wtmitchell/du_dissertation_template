@@ -197,6 +197,7 @@
 
 \KOMAoption{fontsize}{11pt}
 \KOMAoption{toc}{chapterentrywithdots}
+\KOMAoption{listof}{totoc}
 
 % Draft mode
 \RequirePackage[left, pagewise]{lineno}
