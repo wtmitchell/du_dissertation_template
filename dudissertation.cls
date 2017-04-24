@@ -184,6 +184,7 @@
 
   \iftoggle{printlistofsymbols}{
     \glsaddall
+    \addcontentsline{toc}{chapter}{List of Symbols}
     \printglossary[title=List of Symbols,type=symbols]
   }{}
 
