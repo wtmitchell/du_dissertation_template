@@ -178,14 +178,14 @@
     \listoffigures
   }{}
 
-  \iftoggle{listoftables}{
-    \listoftables
-  }{}
-
   \iftoggle{printlistofsymbols}{
     \glsaddall
     \addcontentsline{toc}{chapter}{List of Symbols}
     \printglossary[title=List of Symbols,type=symbols]
+  }{}
+
+  \iftoggle{listoftables}{
+    \listoftables
   }{}
 
   % The remainder of the document uses arabic page numbers
