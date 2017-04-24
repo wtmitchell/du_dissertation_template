@@ -37,9 +37,24 @@
 % List of Tables. As per DU rules, required for 5+, optional otherwise
 \toggletrue{listoftables}
 
-% List of Symbols. Comment out to disable
-\setuplistofsymbols{symbols.tex}
+% Setup the bibliography
+\usepackage[
+backend=biber,
+style=numeric
+]{biblatex}
 
+% Put the Bibliography into the Table of Contents
+%\KOMAoption{bibliography}{totoc}
+
+\addbibresource{bibliography.bib}
+
+
+% Put any additional package declarations here
+
+% List of Symbols. Comment out to disable.
+% Note if you define custom command for symbols, ensure they occur prior
+% to this line
+\setuplistofsymbols{symbols.tex}
 
 \begin{document}
 % Create all the various required pages (title, copyright, abstract, etc)
@@ -51,6 +66,15 @@
 \include{ch_bar}
 \include{ch_algo}
 \include{ch_ref}
+
+% Put the bibliography into the table of contents. This really shouldn't be
+% needed, the \KOMAoption{bibliography{totoc} should take care of this, but
+% for some reason biblatex is not recognizing that option and emitting the
+% line below as appropriate. It is not clear if the problem is how the
+% KOMA-Script option is being specified, a problem in KOMA-Script, or in
+% biblatex.
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
 
 \end{document}
 %%% Local Variables:

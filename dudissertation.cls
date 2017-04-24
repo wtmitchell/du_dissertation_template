@@ -143,7 +143,6 @@
   \hypersetup{
     pdfauthor={\@author},
     pdftitle={\@title},
-    pdfprintscaling=None
   }
 
   % Everything is double space
@@ -197,6 +196,7 @@
 
 \KOMAoption{fontsize}{11pt}
 \KOMAoption{toc}{chapterentrywithdots}
+\KOMAoption{bibliography}{totoc}
 \KOMAoption{listof}{totoc}
 
 % Draft mode
