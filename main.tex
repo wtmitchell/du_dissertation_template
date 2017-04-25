@@ -43,11 +43,23 @@ backend=biber,
 style=numeric
 ]{biblatex}
 
-% Put the Bibliography into the Table of Contents
-%\KOMAoption{bibliography}{totoc}
-
 \addbibresource{bibliography.bib}
 
+% Setup asmthm environments
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{exmp}[thm]{Example}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{note}[thm]{Note}
 
 % Put any additional package declarations here
 
