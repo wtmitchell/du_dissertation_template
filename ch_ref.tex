@@ -80,6 +80,15 @@ Reference to \cref{rem:foo}.
 
 Reference to \cref{note:foo}.
 
+\section {Others}
+\begin{algorithm}
+  % Note the label needs to be inside the caption for cleveref to recognize it
+  \caption{Algorithm Caption\label{alg:foo}}
+  Algorithm
+\end{algorithm}
+
+Reference to \cref{alg:foo}.
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
