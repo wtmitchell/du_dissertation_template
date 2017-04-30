@@ -5,6 +5,9 @@ $pdflatex = 'lualatex %O %S';
 $pdf_mode = 1;
 $postscript_mode = $dvi_mode = 0;
 
+# Use xindy for index processing
+$makeindex = 'texindy %O -o %D %S';
+
 # Process the main file by default
 @default_files = ("main.tex");
 

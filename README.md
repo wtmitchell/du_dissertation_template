@@ -33,6 +33,8 @@ LaTeX package dependencies of the template:
 * [amssymb](https://www.ctan.org/pkg/amsfonts) - Part of amsfonts
 * [cleveref](https://www.ctan.org/pkg/cleveref) - Simple, nice, inter-document cross references
 * [algorithmicx](https://www.ctan.org/pkg/algorithmicx) - Provides a nice environment to typeset algorithms. Use the algpseudocode layout (with just \usepackage{algopseudocode}, no need for \usepackage{algorithmicx}). This should be your choice for pseudocode.
+* [imakeidx](https://www.ctan.org/pkg/imakeidx) - Allows for multiple indices if desired. Index generation can be disabled
+* [idxlayout](https://www.ctan.org/pkg/idxlayout) - Controls the layout
 
 Recommended LaTeX packages and tools:
 * [latexmk](http://personal.psu.edu/jcc8//software/latexmk-jcc/) - A Perl script which manages building the document. It will automatically call LaTeX the correct number of times as well as associated tools such as biber and xindy.

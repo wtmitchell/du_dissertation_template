@@ -286,3 +286,16 @@ includefoot=true
   \loadglsentries{#1}
   \makeglossaries
 }
+
+% Index setup
+\RequirePackage[xindy]{imakeidx}
+\RequirePackage[
+unbalanced,
+columns=2,
+totoc
+]{idxlayout}
+\newtoggle{indexenabled}
+\newcommand*{\enableindex}{
+  \toggletrue{indexenabled}
+  \makeindex
+}
