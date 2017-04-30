@@ -200,12 +200,6 @@
 \KOMAoption{bibliography}{totoc}
 \KOMAoption{listof}{totoc}
 
-% Draft mode
-\RequirePackage[left, pagewise]{lineno}
-\newcommand*{\enabledraftmode}{
-  \KOMAoption{draft}{true}
-  \linenumbers
-}
 
 % Set the paragraph indent to 0.5in to match the Word templates
 \setparsizes{0.5in}{0pt}{0pt plus 1fil}
@@ -299,3 +293,26 @@ totoc
   \toggletrue{indexenabled}
   \makeindex
 }
+
+% Draft mode
+
+\RequirePackage[left, pagewise]{lineno}
+\newcommand*{\enabledraftmode}{
+  \KOMAoption{draft}{true}
+  \linenumbers
+
+  % from https://tex.stackexchange.com/questions/64249/mark-indexed-entries-in-the-text-itself
+  \newcommand*{\@theindexentry}[2]{%
+    \smash{%
+      \rlap{\rule{.4pt}{.8\baselineskip}}% Vertical rule
+      \begin{lrbox}{\@tempboxa}\tiny\ttfamily##1: ##2\end{lrbox}% Box index entry
+      \rlap{\raisebox{.6\baselineskip}{\usebox{\@tempboxa}}}% key
+    }%
+  }
+  \renewcommand\imki@wrindexentrysplit[3]{%
+    \expandafter\protected@write\csname##1@idxfile\endcsname{}%
+    {\string\indexentry{##2}{##3}}%
+    \@theindexentry{##1}{##2}%
+  }
+}
+
